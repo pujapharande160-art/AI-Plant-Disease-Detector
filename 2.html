@@ -1,0 +1,351 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About AI Technology | AI Plant Disease Detector</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4fff6;
+    color:#333;
+}
+
+/* Navigation */
+
+nav{
+    background:#1b5e20;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:#fff;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ffeb3b;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Header */
+
+header{
+    background:linear-gradient(rgba(0,90,0,.7),rgba(0,90,0,.7)),
+    url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1500&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+header p{
+    max-width:850px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* Container */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:50px auto;
+}
+
+.section-title{
+    text-align:center;
+    color:#1b5e20;
+    margin-bottom:25px;
+}
+
+/* Working Steps */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.step{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 12px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.step:hover{
+    transform:translateY(-8px);
+}
+
+.step h3{
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+/* Technologies */
+
+.tech{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:30px;
+}
+
+.tech div{
+    background:#4caf50;
+    color:white;
+    padding:18px;
+    text-align:center;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* Info */
+
+.info{
+    background:white;
+    margin:50px auto;
+    width:90%;
+    max-width:700px;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 12px rgba(0,0,0,.1);
+}
+
+.info h2{
+    text-align:center;
+    color:#1b5e20;
+    margin-bottom:20px;
+}
+
+.info table{
+    width:100%;
+}
+
+.info td{
+    padding:10px;
+}
+
+/* Footer */
+
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:40px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+flex-direction:column;
+position:absolute;
+top:65px;
+left:0;
+width:100%;
+background:#1b5e20;
+}
+
+nav ul.show{
+display:flex;
+}
+
+nav ul li{
+margin:15px;
+}
+
+.menu{
+display:block;
+}
+
+header h1{
+font-size:32px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+
+<div class="logo">🌿 AI Plant Disease Detector</div>
+
+<div class="menu" onclick="menuToggle()">
+☰
+</div>
+
+<ul id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="2.html">About</a></li>
+<li><a href="3.html">Features</a></li>
+<li><a href="4.html">Detection</a></li>
+<li><a href="5.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header>
+
+<h1>About AI Technology</h1>
+
+<p>
+Artificial Intelligence uses image recognition techniques to analyze plant leaves and identify disease patterns. The uploaded image is processed using a trained Machine Learning model, which compares it with thousands of previously learned plant images.
+</p>
+
+</header>
+
+<div class="container">
+
+<h2 class="section-title">How AI Detects Plant Diseases</h2>
+
+<div class="steps">
+
+<div class="step">
+<h3>Step 1</h3>
+<p>Upload a clear image of a plant leaf.</p>
+</div>
+
+<div class="step">
+<h3>Step 2</h3>
+<p>Image preprocessing removes noise and adjusts brightness.</p>
+</div>
+
+<div class="step">
+<h3>Step 3</h3>
+<p>AI extracts leaf color, spots, patches, texture, shape, and disease patterns.</p>
+</div>
+
+<div class="step">
+<h3>Step 4</h3>
+<p>The trained AI model predicts whether the plant is healthy or diseased.</p>
+</div>
+
+<div class="step">
+<h3>Step 5</h3>
+<p>The application displays disease name, confidence score, and treatment suggestions.</p>
+</div>
+
+</div>
+
+<h2 class="section-title" style="margin-top:50px;">Technologies Used</h2>
+
+<div class="tech">
+
+<div>Artificial Intelligence</div>
+<div>Machine Learning</div>
+<div>Deep Learning</div>
+<div>Computer Vision</div>
+<div>Image Processing</div>
+<div>HTML</div>
+<div>CSS</div>
+<div>JavaScript</div>
+<div>Python Backend</div>
+<div>TensorFlow / Keras</div>
+
+</div>
+
+<p style="margin-top:35px; text-align:center; line-height:1.8;">
+This technology helps detect diseases early, reducing crop damage and increasing farming efficiency.
+</p>
+
+</div>
+
+<div class="info">
+
+<h2>Project Information</h2>
+
+<table>
+
+<tr>
+<td><strong>Name</strong></td>
+<td>Shubhashri</td>
+</tr>
+
+<tr>
+<td><strong>College Name</strong></td>
+<td>KBP Polytechnic Satara</td>
+</tr>
+
+<tr>
+<td><strong>Course</strong></td>
+<td>AI Software Development</td>
+</tr>
+
+<tr>
+<td><strong>Date</strong></td>
+<td>29/06/2026</td>
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+
+© 2026 AI Plant Disease Detector | Developed by Shubhashri
+
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("menuList").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
+```
